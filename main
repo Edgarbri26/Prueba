@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+struct Usuario{
+	char Nombre[20];
+	int Contrasenna;
+	char Rol;
+	int Edad;
+}usuario;
+
+int main(){
+	int opcion;
+	struct Usuario admin;
+	admin.Contrasenna = 1234;
+	admin.Edad = 25;
+	strcpy(admin.Nombre, "Edgar");
+	admin.Rol = 'A';
+	
+	usuario = admin;
+	char rol = 'A';
+	/*int num = 5;
+	int *puntero = &num;
+	
+	*puntero = 10;*/
+	
+	printf("%s \n", usuario.Nombre);
+	printf("%d \n", usuario.Edad);
+	printf("%d \n", usuario.Contrasenna);
+	printf("%c \n", usuario.Rol);
+	
+	
+	
+	if(rol != 'I'){
+		printf("Seleccione una opcion");
+		scanf("%d", &opcion);
+	}else{
+		printf("precione 0 para volver");
+		scanf("%d", &opcion);
+	}
+	
+	
+	
+	
+	switch(rol){
+		case 'A': {
+			printf("Este es un admin");
+			break;
+		}
+
+	}
+}
